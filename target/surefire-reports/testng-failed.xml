@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="amazon_package.AmazonProject.TC_4_EditProfile">
+        <methods>
+          <include name="editProfile"/>
+          <include name="launchUrl"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC_4_EditProfile -->
+      <class name="amazon_package.AmazonProject.TC_3_AmzLoginWithInvalidPassword">
+        <methods>
+          <include name="loginWithInvalidPassword"/>
+          <include name="launchUrl"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC_3_AmzLoginWithInvalidPassword -->
+      <class name="amazon_package.AmazonProject.TC_3_AddToWishList">
+        <methods>
+          <include name="launchUrl"/>
+          <include name="addToWishList"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC_3_AddToWishList -->
+      <class name="amazon_package.AmazonProject.TC_7_ProductPageCheckInfo">
+        <methods>
+          <include name="checkInfo"/>
+          <include name="launchUrl"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC_7_ProductPageCheckInfo -->
+      <class name="amazon_package.AmazonProject.TC_9_AmzAddToCart">
+        <methods>
+          <include name="launchUrl"/>
+          <include name="addToCart"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC_9_AmzAddToCart -->
+      <class name="amazon_package.AmazonProject.TC10_AmzUpdateCart">
+        <methods>
+          <include name="updateCart"/>
+          <include name="launchUrl"/>
+        </methods>
+      </class> <!-- amazon_package.AmazonProject.TC10_AmzUpdateCart -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
