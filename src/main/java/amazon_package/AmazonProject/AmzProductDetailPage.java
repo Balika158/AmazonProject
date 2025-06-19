@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class AmzProductDetailPage {
 
@@ -26,16 +27,16 @@ public class AmzProductDetailPage {
 	
 	public void descriptionDivIsDisplayed()
 	{
-		
+		Assert.assertEquals(titleDiv.isDisplayed(), true);
 		
 	}
 	public void customerReviewsIsDisplayed()
 	{
-		
+		Assert.assertEquals(CustomerReviews.isDisplayed(), true);
 	}
 	public void priceIsDisplayed()
 	{
-		
+		Assert.assertEquals(price.isDisplayed(), true);
 	}
 	
 	public void addToCartBtnClick()
