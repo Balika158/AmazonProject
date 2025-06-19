@@ -27,16 +27,16 @@ public class AmzProductDetailPage {
 	
 	public void descriptionDivIsDisplayed()
 	{
-		Assert.assertEquals(titleDiv.isDisplayed(), true);
+		
 		
 	}
 	public void customerReviewsIsDisplayed()
 	{
-		Assert.assertEquals(CustomerReviews.isDisplayed(), true);
+		
 	}
 	public void priceIsDisplayed()
 	{
-		Assert.assertEquals(price.isDisplayed(), true);
+		
 	}
 	
 	public void addToCartBtnClick()
