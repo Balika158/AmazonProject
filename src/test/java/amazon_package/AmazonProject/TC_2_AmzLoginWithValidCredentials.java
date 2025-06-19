@@ -1,17 +1,21 @@
 package amazon_package.AmazonProject;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.NumberToTextConverter;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -42,7 +46,7 @@ public class TC_2_AmzLoginWithValidCredentials extends BaseClass{
 	}
 	
 	@Test(dataProvider="amzLoginTestData")
-	public void loginWithValidCredentials(String username, String password)
+	public void loginWithValidCredentials(String username, String password) throws InterruptedException
 	{
 		AmzHomePage home = new AmzHomePage(driver);
 		home.accountAndListHoverOver(driver);
@@ -53,7 +57,11 @@ public class TC_2_AmzLoginWithValidCredentials extends BaseClass{
 		login.continueBtnClick();
 		login.passwordInputSendkeysForLoginWithDataprovider(password);
 		login.signInSubmitBtnClick(driver);
-		AssertJUnit.assertEquals(driver.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.titleContains("Online"));
+		//login.helloLinkTextGetValue();
+		Assert.assertEquals(driver.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
 	}
 	
 	

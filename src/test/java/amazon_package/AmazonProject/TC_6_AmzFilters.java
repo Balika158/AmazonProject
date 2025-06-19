@@ -3,6 +3,7 @@ package amazon_package.AmazonProject;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class TC_6_AmzFilters extends BaseClass{
 	

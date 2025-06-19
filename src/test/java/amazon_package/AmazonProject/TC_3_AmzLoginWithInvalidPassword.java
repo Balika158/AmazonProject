@@ -1,16 +1,19 @@
 package amazon_package.AmazonProject;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TC_3_AmzLoginWithInvalidPassword extends BaseClass{
 
 	@Test
-	public void loginWithInvalidPassword()
+	public void loginWithInvalidPassword() throws InterruptedException
 	{
 		AmzHomePage home = new AmzHomePage(driver);
 		home.accountAndListHoverOver(driver);
@@ -21,6 +24,7 @@ public class TC_3_AmzLoginWithInvalidPassword extends BaseClass{
 		login.continueBtnClick();
 		login.passwordInputSendkeysForInvalidPassword();
 		login.signInSubmitBtnClick(driver);
-		AssertJUnit.assertEquals(driver.getTitle(), "Amazon Sign In");
+		Thread.sleep(30000);
+		Assert.assertEquals(driver.getTitle(), "Amazon Sign In");
 	}
 }

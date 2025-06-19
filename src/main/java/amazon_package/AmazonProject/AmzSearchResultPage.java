@@ -34,13 +34,13 @@ public class AmzSearchResultPage{
 		js.executeScript("window.scrollBy(0,"+y+")");
 		firstProduct.click();
 		
-		Set<String> allWindows = driver.getWindowHandles();
+		/*Set<String> allWindows = driver.getWindowHandles();
 		Iterator i1 = allWindows.iterator();
 		
 		String pWindow =  (String) i1.next();
 		String cWindow =  (String) i1.next();
 		
-		driver.switchTo().window(cWindow);
+		driver.switchTo().window(cWindow);*/
 	}
 
 	//step 3

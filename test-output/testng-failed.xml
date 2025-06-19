@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="amazon_package.AmazonProject.TC_2_AmzLoginWithValidCredentials">
+      <class name="amazon_package.AmazonProject.TC_4_EditProfile">
         <methods>
-          <include name="loginWithValidCredentials"/>
+          <include name="editProfile"/>
           <include name="launchUrl"/>
         </methods>
-      </class> <!-- amazon_package.AmazonProject.TC_2_AmzLoginWithValidCredentials -->
+      </class> <!-- amazon_package.AmazonProject.TC_4_EditProfile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

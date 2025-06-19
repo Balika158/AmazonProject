@@ -28,6 +28,9 @@ public class AmzLoginPage {
 	@FindBy(id="signInSubmit")
 	WebElement signInSubmitBtn;
 	
+	@FindBy(xpath="//span[@id=\"nav-link-accountList-nav-line-1\"]")
+	WebElement helloLinkText;
+	
 	
 	public void signInBtnClick(WebDriver driver)
 	{

@@ -1,5 +1,7 @@
 package amazon_package.AmazonProject;
 
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -7,7 +9,7 @@ import org.testng.annotations.Test;
 public class TC_1_AmzRegistration extends BaseClass{
 	
 	@Test
-	public void registration()
+	public void registration() throws InterruptedException
 	{
 		AmzHomePage home = new AmzHomePage(driver);
 		home.accountAndListHoverOver(driver);
@@ -17,11 +19,15 @@ public class TC_1_AmzRegistration extends BaseClass{
 		registration.emailSendkeys();
 		registration.continueClick();
 		registration.proceedBtnClick();
-		//registration.signInSubmitBtnClick();
-		//mobileNumberSendKeys fullNameSendKeys passwordSendKeys verifyMobBtnClick
 		registration.mobileNumberSendKeys();
 		registration.fullNameSendKeys();
 		registration.passwordSendKeys();
 		registration.verifyMobBtnClick();
+		Thread.sleep(25000);
+		registration.verifyUsingWpBtn();
+		Thread.sleep(25000);
+		registration.createYourAmazonAccountBtnClick();
+		
+		
 	}
 }

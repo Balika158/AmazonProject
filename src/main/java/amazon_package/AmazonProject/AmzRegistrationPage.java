@@ -34,6 +34,12 @@ public class AmzRegistrationPage {
 	@FindBy(id="continue")
 	WebElement verifyMobBtn;
 	
+	@FindBy(xpath="//span[@id=\"cvf-submit-otp-button\"]")
+	WebElement createYourAmazonAccBtn;
+	
+	@FindBy(xpath="//span[@id=\"secondary_channel_button\"]")
+	WebElement verifyUsingWp;
+	
 	//continue
 	public void emailSendkeys()
 	{
@@ -52,7 +58,7 @@ public class AmzRegistrationPage {
 	
 	public void mobileNumberSendKeys()
 	{
-		mobileNumber.sendKeys("9635930333");
+		mobileNumber.sendKeys("8767172289");
 	}
 	
 	public void fullNameSendKeys()
@@ -70,6 +76,14 @@ public class AmzRegistrationPage {
 		verifyMobBtn.click();
 	}
 	
+	public void verifyUsingWpBtn()
+	{
+		verifyUsingWp.click();
+	}
+	public void createYourAmazonAccountBtnClick()
+	{
+		createYourAmazonAccBtn.click();
+	}
 	public AmzRegistrationPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);

@@ -3,11 +3,12 @@ package amazon_package.AmazonProject;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class TC_4_EditProfile extends BaseClass{
 
 	@Test
-	public void editProfile()
+	public void editProfile() throws InterruptedException
 	{
 		AmzHomePage home = new AmzHomePage(driver);
 		home.accountAndListHoverOver(driver);
@@ -24,8 +25,15 @@ public class TC_4_EditProfile extends BaseClass{
 		
 		AmzProfilePage profile = new AmzProfilePage(driver);
 		profile.loginAndSecurityCardClick();
-		profile.optInputSendKeys();
+		Thread.sleep(20000);
+		profile.nameEditBtnClick();
+		profile.newNameSendkeys();
+		profile.newNameSaveChangesBtnClick();
+		profile.emailEditBtnClick();
+		profile.newEmailInputSendkeys();
+		profile.continueBtnFromNewEmailClick();
 		
-		
+		Thread.sleep(20000);
+		profile.pwdEditBtnClick();
 	}
 }
